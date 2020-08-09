@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nodejs</title>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+
+    <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+
+     @media print {
+      body {
+        display: none;
+      }
+    }
+
+    </style>
+
+
+</head>
+<body style="font-family: 'Nunito', sans-serif;">
+
+<h1 class="head" style="text-align: center;">This text is disabled for copying and pressing right click</h1>
+<br>
+<h1 style="text-align: center;">IP Address: {{address}}</h1>
+
+<p style="text-align: center;">(we can't dis-allow user from priniting the page but we can hide the content after user try to print <br> the page like i did in this page using Media print css query. )</p>
+
+</body>
+
+
+ <script>
+
+      $(document).ready(function() {
+          $('.head').bind('cut copy', function(e) {
+              e.preventDefault();
+            });
+        });
+
+
+        $(document).ready(function() {
+          $(".head").on("contextmenu", function(e) {
+              return false;
+            });
+        });
+
+
+
+    </script>
+
+
+
+
+
+</html>
